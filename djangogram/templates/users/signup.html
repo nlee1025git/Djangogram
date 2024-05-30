@@ -1,14 +1,30 @@
+{% extends "users/base.html" %}
 <h1>Here is signup page</h1>
+{% block title %}
+Sign Up
+{% endblock title %}
 
-<form action="{% url 'users:signup' %}" method="post">
-    {% csrf_token %}
-    {% for field in form %}
-    <div class="fieldWrapper">
-        {{field.erros}}
-        {{field.label_tag}} {{field}}
+{% block content %}
+
+<br>
+<div class="container">
+    <div class="signup-form">
+        <h3>Djangogram</h3>
+        <form action="{% url 'users:signup' %}" method="post">
+                {% csrf_token %}
+                {% for field in form %}
+                    {{field.erros}}
+                    {{field}}
+                {% endfor %}
+                <button type="submit">Sign up</button>
+            </div>
+        </form>
     </div>
-    {% endfor %}
-    <input type="submit" value="Sign up">
-</form>
+</div>
 
-<a href="{% url 'users:main' %}">Login</a>
+<div class="container2">
+    <div class="login">
+        <a href="{% url 'users:main' %}">Log in</a>
+    </div>
+</div>
+{% endblock content %}

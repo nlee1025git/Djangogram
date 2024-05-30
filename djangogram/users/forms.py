@@ -45,15 +45,11 @@ class SignUpForm(django_forms.ModelForm):
         model = User
         fields = ["email", "name", "username", "password"]
 
-        labels = {
-            "email": "Email",
-            "name": "Name",
-            "username": "Username",
-            "password": "Password",
-        }
-
         widgets = {
-            "password": django_forms.PasswordInput(),
+            "email": django_forms.TextInput(attrs={"placeholder":"Email"}),
+            "name": django_forms.TextInput(attrs={"placeholder":"Name"}),
+            "username": django_forms.TextInput(attrs={"placeholder":"Username"}),
+            "password": django_forms.PasswordInput(attrs={"placeholder":"Password"}),
         }
     
     def save(self, commit=True):
