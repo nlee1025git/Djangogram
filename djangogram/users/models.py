@@ -16,7 +16,7 @@ class User(AbstractUser):
     # First and last name do not cover name patterns around the globe
     name = models.CharField(_("Name of User"), blank=True, max_length=255)
     user_name = models.CharField(blank=True, max_length=255)
-    profile_photoe = models.ImageField(blank=True)
+    profile_photo = models.ImageField(blank=True)
     website = models.URLField(blank=True)
     bio = models.TextField(blank=TRUE)
     email = models.CharField(blank=True, max_length=255)
