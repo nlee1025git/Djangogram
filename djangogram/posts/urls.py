@@ -23,4 +23,7 @@ urlpatterns = [
 
     # /posts/search/
     path('search/', views.search, name='post_search'),
+
+    # /posts/1/post_delete/
+    path('<int:post_id>/post_delete', views.post_delete, name="post_delete"),
 ]
