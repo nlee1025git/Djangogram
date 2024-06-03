@@ -15,37 +15,37 @@ body, html {
     height: 100%;
 }
 
-.signup-form {
+.signup-form, .login-form {
     background-color: #f9f9f9;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-.signup-form h3 {
+.signup-form h3, .login-form h3{
     text-align: center;
 }
 
-.signup-form form {
+.signup-form form, .login-form form {
     display: flex;
     flex-direction: column;
 }
 
-.signup-form input, .signup-form button {
+.signup-form input, .signup-form button, .login-form input, .login-form button {
     margin-bottom: 10px;
     padding: 8px;
     border-radius: 4px;
     border: 1px solid #ccc;
 }
 
-.signup-form button {
+.signup-form button, .login-form button {
     background-color: #3b7ed6;
     color: white;
     border: none;
     cursor: pointer;
 }
 
-.signup-form button:hover {
+.signup-form button:hover, .login-form button:hover {
     background-color: #2185d6;
 }
 
@@ -63,9 +63,34 @@ body, html {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-.footer {
+footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50%;
+    height: 90%;
+}
+
+footer .list {
+    margin: auto;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+footer ul li {
+    margin: 10px;
+}
+
+footer ul li a {
+    color: #00376b;
+    text-decoration: none;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+footer .company {
+    margin: auto;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }

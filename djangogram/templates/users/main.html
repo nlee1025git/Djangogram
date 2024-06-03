@@ -1,16 +1,27 @@
 {% extends "users/base.html" %}
-Here is main.html
+
 {% block title %}
 Login
 {% endblock title %}
 
 {% block content %}
-<form action="{% url 'users:main' %}" method="post">
-    {% csrf_token %}
-    <input type="input" name="username" placeholder="username"><br>
-    <input type="password" name="password" placeholder="password"><br>
-    <input type="submit" value="Login">
-</form>
+<br>
+<div class="container">
+    <div class="login-form">
+        <h3>Djangogram</h3>
+        <form action="{% url 'users:main' %}" method="post">
+            {% csrf_token %}
+            <input type="input" name="username" placeholder="username">
+            <input type="password" name="password" placeholder="password">
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</div>
 
-<a href="{% url 'users:signup' %}">Sign up</a>
+<br>
+<div class="container2">
+    <div class="login">
+        <a href="{% url 'users:signup' %}">Sign up</a>
+    </div>
+</div>
 {% endblock content %}
